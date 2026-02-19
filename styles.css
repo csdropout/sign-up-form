@@ -1,61 +1,140 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, Helvetica, sans-serif;
 }
 
 .main-container {
-    display: flex;
-    flex-direction: row;
-    width: 100vw;
-    height: 100vh;
-    background-color: lightgrey;
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+  height: 100vh;
+  background-color: lightgrey;
 }
 
 .left-container {
-    flex: 3 1 0;
+  flex: 3 1 0;
+  max-width: 30%;
 
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 
-    background-image: url(./images/halie-west-25xggax4bSA-unsplash.jpg);
-    background-size: cover;
+  background-image: url(./images/halie-west-25xggax4bSA-unsplash.jpg);
+  background-size: cover;
 
-    text-align: center;
-    justify-content: space-between;
-}
-
-.right-container {
-    flex: 7 1 0;
+  text-align: center;
+  justify-content: space-between;
 }
 
 div.logo-container {
-    display: flex;
+  display: flex;
 
-    justify-content: center;
-    align-items: center;
+  justify-content: center;
+  align-items: center;
 
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 20px;
-    margin-top: 40%;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  margin-top: 40%;
 }
 
 img.logo {
-    max-width: 20%;
-    height: auto;
+  max-width: 20%;
+  height: auto;
 }
 
 p.logo-text {
-    color: white;
-    font-size: 80px;
+  color: white;
+  font-size: 80px;
 }
 
 p.photo-credits {
-    color: lightgrey;
-    font-size: 14px;
-    margin-bottom: 10px;
+  color: lightgrey;
+  font-size: 14px;
+  margin-bottom: 10px;
 }
 
 p.photo-credits a {
-    color: inherit;
+  color: inherit;
+}
+
+.right-container {
+  --horizontal-padding: 60px;
+  --vertical-margin: 20px;
+  --body-font-size: 24px;
+
+  flex: 7 1 0;
+  max-width: 70%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+div.right-body-text {
+  font-weight: 600;
+  font-size: var(--body-font-size);
+
+  display: flex;
+  flex-direction: column;
+  gap: var(--vertical-margin);
+}
+
+div.form-row {
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+  margin-top: 20px;
+}
+
+form {
+  margin: var(--vertical-margin) 0 0;
+  background-color: white;
+  padding: 20px var(--horizontal-padding);
+  text-align: start;
+  box-shadow: 0 1px 5px black;
+}
+
+form > legend {
+  font-weight: 600;
+  font-size: var(--body-font-size);
+}
+
+input,
+label {
+  display: block;
+}
+
+label {
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+input {
+  border-radius: 5px;
+  font-size: 16px;
+  height: 24px;
+}
+
+button[type="submit"] {
+  padding: 10px 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+  background-color: darkolivegreen;
+  color: white;
+}
+
+.right-container > div {
+  margin-top: var(--vertical-margin);
+  padding-left: var(--horizontal-padding);
+  margin-right: 300px;
+}
+
+a#log-in,
+a#log-in:visited {
+  color: darkolivegreen;
+  text-decoration: none;
 }
