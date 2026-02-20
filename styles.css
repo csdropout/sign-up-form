@@ -11,14 +11,12 @@ body {
 .main-container {
   display: flex;
   flex-direction: row;
-  width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   background-color: lightgrey;
 }
 
 .left-container {
-  flex: 3 1 0;
-  max-width: 30%;
+  flex: 1 1 30%;
 
   display: flex;
   flex-direction: column;
@@ -66,8 +64,7 @@ p.photo-credits a {
   --vertical-margin: 20px;
   --body-font-size: 24px;
 
-  flex: 7 1 0;
-  max-width: 70%;
+  flex: 1 1 70%;
 
   display: flex;
   flex-direction: column;
